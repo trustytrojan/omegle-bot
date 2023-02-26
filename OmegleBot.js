@@ -1,4 +1,4 @@
-class OmegleBot {
+export default class OmegleBot {
 	#interval_id;
 
 	constructor(message) {
