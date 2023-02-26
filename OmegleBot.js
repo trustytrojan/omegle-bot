@@ -6,9 +6,10 @@ export default class OmegleBot {
 	}
 	
 	start() {
-		#interval_id = setInterval(() => {
+		this.#interval_id = setInterval(() => {
 			document.querySelector('.disconnectbtn')?.click();
-			document.querySelector('.chatmsg')?.innerHTML = this.message;
+			const message_box = document.querySelector('.chatmsg');
+			if (message_box) message_box.innerHTML = this.message;
 			document.querySelector('.sendbtn')?.click();
 		}, 4_000);
 	}
